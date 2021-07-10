@@ -1,10 +1,11 @@
-@import url(https://fonts.googleapis.com/css?family=Roboto:400,700);
+/* Il faudrait trouver un moyen de se passer de l'import via Google fonts */
+@import url(https://fonts.googleapis.com/css?family=Roboto);
 
 
 :root {
 	/* Base font size */
 	font-size: 14px;
-  
+  font-family: 'Roboto', sans-serif;  
   /* Heading height variable*/
 	--heading-height: 9em;
 }
@@ -34,7 +35,7 @@ h3 {
 	font-size: 1.6em;
 	font-weight: 700;
 	letter-spacing: .01em;
-	padding: 0.5em 0 0.5em 0;
+	padding: 1em 0 1em 0;
   margin: 0;
 	color: #51538F;
 }
