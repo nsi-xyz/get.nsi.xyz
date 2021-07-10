@@ -7,18 +7,7 @@
         <style>
             @import url(style.css);
         </style>
-
-        <script type="text/javascript">
-            function init () {
-                let submit = document.getElementById("sub");
-                p.onclick = hideTextShowNumber;
-            };
-
-            function hideTextShowNumber () {
-                document.getElementById("start_text").hidden = true;
-                document.getElementById("output").hidden = false
-            }
-        </script>
+        
         <script src="https://package.nsi.xyz/api/"></script>
 
         <link rel="icon" href="favicon.ico" />
@@ -57,8 +46,7 @@
                 <!-- fin du formulaire web -->
 
                 <h3>Résultat du calcul :</h3>
-                <h4 id="start_text">Rien pour le moment</h4>
-                <h4 id="output"><?php
+                <h4><?php
                     $result = "";
                     if (isset($_GET["nb1"]) && isset($_GET["nb2"])) {
                         $result = $_GET['nb1'] + $_GET['nb2'];
@@ -74,7 +62,7 @@
                             echo "V0uS 3t3s 1 h4cK3r !";
                             break;
                         default:
-                            echo "";
+                            echo "Rien pour le moment";
                     }
                 ?></h4>
                 <!-- RADIO BTN POUR CACHER LE MESSAGE RIEN POUR LE MOMENT-->
