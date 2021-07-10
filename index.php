@@ -39,9 +39,12 @@
                 <h3>Formulaire web basé sur la méthode GET</h3>
                 <!-- début du formulaire web -->
                 <form action="#goto-result" method="get">
-                    <p>Saisir un premier nombre : <input type="number" name="nb1" value="<?php echo $_GET['nb1'];?>"></p>
-                    <p>Saisir un deuxième nombre : <input type="number" name="nb2" value="<?php echo $_GET['nb2'];?>"></p>
-                    <p><input type="submit" value="Additionner !" id="sub"></p>
+                    <p>Saisir un premier nombre :</p>
+                    <input type="number" name="nb1" value="<?php echo $_GET['nb1'];?>">
+                    <p>Saisir un deuxième nombre :</p>
+                    <input type="number" name="nb2" value="<?php echo $_GET['nb2'];?>">
+                    <p>Cliquer pour envoyer les données :</p>
+                    <input type="submit" value="Additionner !" id="sub">
                 </form>
                 <!-- fin du formulaire web -->
 

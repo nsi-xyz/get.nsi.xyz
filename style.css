@@ -144,11 +144,10 @@ input[type=submit] {
   border-radius: 5px;
   border: 1px solid white;
   color: white;
-  width: 10vw;
-  height: 6vh;
+  width: 300px;
   min-height: 20px;
-  margin: 0.5vh 0.25vw 0.5vh 0.25vw;
-  padding: 0.25vh 0.25vw 0.25vh 0.25vw;
+  margin: 0 0 1em 0;
+  padding: 10px;
   -webkit-appearance: none;
   font-size: large;
   }
@@ -166,11 +165,10 @@ input[type=number] {
   display: block;
   color: text;
   border: none;
-  width: 5vw;
-  height: 4.5vh;
-  margin: 0.5vh 0.25vw 0.5vh 0.25vw;
-  min-height: 20px;
-  padding: 0.25vh 0.25vw 0.25vh 0.25vw;
+  width: 300px;
+  font-size : 2em;
+  margin: 0 0 1em 0;
+  padding: 10px;
   -webkit-appearance: none;
   text-align: center;
   font-size: large;
