@@ -35,10 +35,10 @@
                 <p>Consulte ton document de cours, il contient les exercices ou activités à faire sur ce site web.</p>
             </div>
 
-            <div>
+            <div id="goto-result">
                 <h3>Formulaire web basé sur la méthode GET</h3>
                 <!-- début du formulaire web -->
-                <form action="" method="get">
+                <form action="#goto-result" method="get">
                     <p>Saisir un premier nombre : <input type="number" name="nb1" value="<?php echo $_GET['nb1'];?>"></p>
                     <p>Saisir un deuxième nombre : <input type="number" name="nb2" value="<?php echo $_GET['nb2'];?>"></p>
                     <p><input type="submit" value="Additionner !" id="sub"></p>
