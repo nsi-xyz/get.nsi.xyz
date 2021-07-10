@@ -51,7 +51,7 @@
                     if (isset($_GET["nb1"]) && isset($_GET["nb2"])) {
                         $result = $_GET['nb1'] + $_GET['nb2'];
                     }
-                    if (result === "") {
+                    if ($result === "") {
                         echo $result;
                     }
                 ?></h4>
