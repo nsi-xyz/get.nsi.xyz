@@ -7,7 +7,7 @@
         <style>
             @import url(style.css);
         </style>
-        
+
         <script src="https://package.nsi.xyz/api/"></script>
 
         <link rel="icon" href="favicon.ico" />
@@ -51,7 +51,9 @@
                     if (isset($_GET["nb1"]) && isset($_GET["nb2"])) {
                         $result = $_GET['nb1'] + $_GET['nb2'];
                     }
-                    echo $result;
+                    if (result === "") {
+                        echo $result;
+                    }
                 ?></h4>
                 <h4><?php
                     switch ($result) {
