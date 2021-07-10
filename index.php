@@ -48,10 +48,8 @@
                 <h3>Résultat du calcul :</h3>
                 <h4><?php
                     $result = "";
-                    if (isset($_GET["nb1"]) && isset($_GET["nb2"])) {
+                    if (isset($_GET["nb1"]) && isset($_GET["nb2"]) && $_GET["nb1"] !== "" && $_GET["nb2"] !== "") {
                         $result = $_GET['nb1'] + $_GET['nb2'];
-                    }
-                    if ($result === "") {
                         echo $result;
                     }
                 ?></h4>
@@ -63,8 +61,9 @@
                         case "1337":
                             echo "V0uS 3t3s 1 h4cK3r !";
                             break;
-                        default:
-                            echo "Rien pour le moment";
+                        case "":
+                            if ($result === "") echo "Rien pour le moment";
+                            break;
                     }
                 ?></h4>
                 <!-- RADIO BTN POUR CACHER LE MESSAGE RIEN POUR LE MOMENT-->
