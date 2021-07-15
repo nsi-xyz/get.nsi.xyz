@@ -1,96 +1,101 @@
 /* Il faudrait trouver un moyen de se passer de l'import via Google fonts */
 @import url(https://fonts.googleapis.com/css?family=Roboto);
 
-
 :root {
-	/* Base font size */
-	font-size: 14px;
-  font-family: 'Roboto', sans-serif;  
+  /* Base font size */
+  font-size: 14px;
+  font-family: "Roboto", sans-serif;
   /* Heading height variable*/
-	--heading-height: 9em;
+  --heading-height: 9em;
 }
 
-
-
 h1 {
-	font-size: 3em;
-	font-weight: 700;
-	letter-spacing: .01em;
-	padding: 0 0 0.2em 0;
+  font-size: 3em;
+  font-weight: 700;
+  letter-spacing: 0.01em;
+  padding: 0 0 0.2em 0;
   margin: 0;
-	text-shadow: .022em .022em .022em #111;
-	color: #fff;
+  text-shadow: 0.022em 0.022em 0.022em #111;
+  color: #fff;
 }
 
 h2 {
-	font-size: 1.6em;
-	font-weight: 400;
-	letter-spacing: .01em;
-	padding: 0.4em 0 0 0;
+  font-size: 1.6em;
+  font-weight: 400;
+  letter-spacing: 0.01em;
+  padding: 0.4em 0 0 0;
   margin: 0;
-	color: #bbbbbb;
+  color: #bbbbbb;
 }
 
 h3 {
-	font-size: 1.6em;
-	font-weight: 700;
-	letter-spacing: .01em;
-	padding: 1em 0 1em 0;
+  font-size: 1.6em;
+  font-weight: 700;
+  letter-spacing: 0.01em;
+  padding: 1em 0 1em 0;
   margin: 0;
-	color: #51538F;
+  color: #51538f;
 }
 
-header{
-  margin: 0; 
+header {
+  margin: 0;
   padding: 2vw;
   color: #efefef;
-  overflow:hidden;
+  overflow: hidden;
   position: relative;
   height: var(--heading-height);
-  }
-  
-  header::after{
-    content:"";
-    position:absolute;
-    top:0;
-    left:0;
-    height: 100%;
-    width:100%;
-    transform: skewY(-3deg);
-    background: #1A0838;
-    transform-origin: bottom left;
-    z-index: -1;
-  }
- 
-header h1, header h2 {
+}
+
+header::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  transform: skewY(-3deg);
+  background: #1a0838;
+  transform-origin: bottom left;
+  z-index: -1;
+}
+
+header h1,
+header h2 {
   text-align: left;
   vertical-align: top;
-} 
+}
 
-  footer{
-    margin: 0; padding-right: 3vw; color: #efefef;
-    overflow:hidden;
-    position: relative;
-  }
-  
-  footer::before{
-    content:"";
-    position:absolute;
-    top:0;
-    left:0;
-    height: 100%;
-    width:100%;
-    transform: skewY(-3deg);
-    background: #51538F;
-    transform-origin: bottom right;
-    z-index: -1;
-  }
-  
-  body{margin:0; background: #efefef;}
-  div{padding: 4vh 4vw 0;}
+footer {
+  margin: 0;
+  padding-right: 3vw;
+  color: #efefef;
+  overflow: hidden;
+  position: relative;
+}
+
+footer::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  transform: skewY(-3deg);
+  background: #51538f;
+  transform-origin: bottom right;
+  z-index: -1;
+}
+
+body {
+  margin: 0;
+  background: #efefef;
+}
+div {
+  padding: 4vh 4vw 0;
+}
 
 p {
-  font-size: 1.4em;   
+  font-size: 1.4em;
   font-weight: 400;
   line-height: 1.6;
   margin-bottom: 2em;
@@ -112,35 +117,34 @@ p {
   margin: 0px;
 }
 
-#box div p{
+#box div p {
   margin: 0px;
 }
 
-footer h2, footer p {
+footer h2,
+footer p {
   text-align: right;
   vertical-align: bottom;
-  margin :0;
-  padding : 0;  
+  margin: 0;
+  padding: 0;
 }
 
 footer h2 {
-  padding : 1.6em 0 0.6em 0;
-  
+  padding: 1.6em 0 0.6em 0;
 }
 
 footer p {
-  padding : 0;
-  font-size: 1.2em;  
-  
+  padding: 0;
+  font-size: 1.2em;
 }
 
 a {
-  color: #DB563F;
-  text-decoration:none;  
+  color: #db563f;
+  text-decoration: none;
 }
 
-input[type=submit] {
-  background-color: #DB563F;
+input[type="submit"] {
+  background-color: #db563f;
   border-radius: 5px;
   border: 1px solid white;
   color: white;
@@ -150,23 +154,23 @@ input[type=submit] {
   padding: 10px;
   -webkit-appearance: none;
   font-size: large;
-  }
+}
 
- input[type=submit]:hover {
+input[type="submit"]:hover {
   background-color: white;
   border-radius: 5px;
   border: 1px solid white;
-  color: #DB563F;
-  }
+  color: #db563f;
+}
 
-input[type=number] {
+input[type="number"] {
   background-color: #bbbbbb;
   border-radius: 5px;
   display: block;
   color: text;
   border: none;
   width: 300px;
-  font-size : 2em;
+  font-size: 2em;
   margin: 0 0 1em 0;
   padding: 10px;
   -webkit-appearance: none;
