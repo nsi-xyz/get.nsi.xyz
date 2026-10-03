@@ -1,0 +1,5 @@
+# Copier vers .dev.vars pour le développement local (npx wrangler dev).
+
+CLIENT_ID=get-nsi-xyz
+LOGIN_BASE_URL=http://localhost:8787
+SITE_ORIGIN=http://localhost:8790

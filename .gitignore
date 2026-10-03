@@ -1,4 +1,6 @@
 .DS_Store
 .env
+.dev.vars
 .wrangler/
 node_modules/
+dist/

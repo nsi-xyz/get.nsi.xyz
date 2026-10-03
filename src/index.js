@@ -5,6 +5,8 @@
    aucun script serveur n'est exposé (comme avec PHP).
    ============================================================ */
 
+import { handleAuthRoutes, getSession } from "./sso.js";
+
 const METHODE = "GET"; // <- "GET" pour get.nsi.xyz, "POST" pour post.nsi.xyz
 
 /* ------------------------------------------------------------
@@ -80,7 +82,7 @@ function interpretation(a) {
 /* ------------------------------------------------------------
    La page
    ------------------------------------------------------------ */
-function page(parametres, requeteBrute) {
+function page(parametres, requeteBrute, user = null) {
 	// Y a-t-il eu une soumission ?
 	const soumis = ["nb1", "nb2"].some(nom => nom in parametres);
 	const a = analyser(parametres.nb1);
@@ -134,6 +136,9 @@ function page(parametres, requeteBrute) {
 	<div class="page">
 		<h1>Formulaire ${METHODE} <span class="badge">méthode ${METHODE}</span></h1>
 		<p class="note">Démonstration d'un formulaire basé sur la méthode <strong>${METHODE}</strong>, pour les <a href="https://nsi.xyz">spé NSI</a> et les autres.</p>
+		<p class="note">${user
+			? `Connecté·e : <strong>${echapper(user.name || user.email || user.sub)}</strong>${user.role ? ` <span class="badge">${echapper(user.role)}</span>` : ""} — <a href="/_auth/logout">Se déconnecter</a>`
+			: `<a href="/_auth/login">Se connecter avec nsi.xyz</a>`}</p>
 
 		<h2>Addition :</h2>
 		<div class="carte">
@@ -168,8 +173,11 @@ function page(parametres, requeteBrute) {
    Le serveur
    ------------------------------------------------------------ */
 export default {
-	async fetch(request) {
+	async fetch(request, env) {
 		const url = new URL(request.url);
+
+		const auth = await handleAuthRoutes(request, env);
+		if (auth) return auth;
 
 		if (url.pathname === "/style.css") {
 			return new Response(CSS, { headers: { "content-type": "text/css; charset=utf-8" } });
@@ -197,7 +205,8 @@ export default {
 			return new Response("Méthode non autorisée", { status: 405 });
 		}
 
-		return new Response(page(parametres, brut), {
+		const user = await getSession(request, env);
+		return new Response(page(parametres, brut, user), {
 			headers: { "content-type": "text/html; charset=utf-8" }
 		});
 	}

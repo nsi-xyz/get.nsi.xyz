@@ -2,5 +2,9 @@
   "name": "get-nsi-xyz",
   "main": "src/index.js",
   "compatibility_date": "2026-09-01",
+  "vars": {
+    "CLIENT_ID": "get-nsi-xyz",
+    "LOGIN_BASE_URL": "https://login.nsi.xyz"
+  },
   "routes": [{ "pattern": "get.nsi.xyz", "custom_domain": true }]
 }
